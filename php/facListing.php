@@ -22,5 +22,5 @@ while($items = $facList->fetch_assoc())
   	echo "<option class='facSelect' value='" . $items['uniqname'] . "'>" . $items['fname'] . " " . $items['lname'] . "</option>";
   }
 
-$db->close();
+// $db->close();
 
