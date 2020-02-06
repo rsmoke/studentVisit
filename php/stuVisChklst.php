@@ -66,7 +66,7 @@
     </nav>
 <?php if ($use_faculty_appt_system){ ?>
     <div class="container-fluid"><!-- Faculty appointment-->
-      <h3>Faculty Appointments for <?php echo  $_SESSION['stuFname'] . " " . $_SESSION['stuLname'] ?></h3>
+      <h4>Faculty Appointments for <?php echo  $_SESSION['stuFname'] . " " . $_SESSION['stuLname'] ?></h4>
       <div class = "row justify-content-sm-center">
         <div class= "col-auto">
           <div class="card border-success" >
@@ -114,6 +114,18 @@
               </table>
             </div>
             <div class="card-footer text-muted"><small>Note: If you do not see any times listed above then all the appointments have been reserved for the selected faculty member</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-sm-center">
+        <hr class='col-sm-6'>
+        <div class="col-sm-6">
+          <div class="card border-primary" style="max-width: 30rem;">
+            <div class="card-header bg-secondary text-warning">Faculty with "walk-in" appointments</div>
+            <div class="card-body">
+              <?php include "walkinAppts.php"; ?>
+            </div>
+            <div class="card-footer text-muted"><small>Note: These appointments do not require a reservation</small></div>
           </div>
         </div>
       </div>
