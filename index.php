@@ -148,7 +148,7 @@
           <hr>
           <ul>
             <li class="font-weight-light"><small><a href="https://www.graduatehotels.com/ann-arbor/" target="_blank">The Graduate (Hotel) Information</a></small></li>
-            <li class="font-weight-light"><small><a href="http://www.onsp.umich.edu/docs/Airport%20Transportation.pdf" target="_blank">Shuttle Service to and from Metro Airport</a></small></li>
+            <li class="font-weight-light"><small><a href="Airport%20Transportation.pdf" target="_blank">Shuttle Service to and from Metro Airport</a></small></li>
             <li class="font-weight-light"><small><a href="https://campusinfo.umich.edu/campusmap" target="_blank">All UofM Maps</a></small></li>
             <li class="font-weight-light"><small><a href="https://ltp.umich.edu/parking/visitors.php" target="_blank">UofM Parking</a></small></li>
             <li class="font-weight-light"><small><a href="http://umich.edu/about/" target="_blank">About U-M</a></small></li>
