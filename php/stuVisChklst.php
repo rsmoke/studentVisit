@@ -93,7 +93,7 @@
           <h6>Make an appointment</h6>
           <ol>
             <li>From the <strong>Faculty List</strong> below select the name of the faculty member that you want to meet with during your visit.</li>
-            <li>Click on the appointment that you want to set. <em>Note: Appointments are for a half hour each</em>.</li>
+            <li>Click on the appointment that you want to set. <em><strong>Note: Appointments are for 1/2 hour each</strong></em>.</li>
           </ol>
         </div>
       </div>
@@ -121,7 +121,7 @@
         <hr class='col-sm-6'>
         <div class="col-sm-6">
           <div class="card border-primary" style="max-width: 30rem;">
-            <div class="card-header bg-secondary text-warning">Faculty with "walk-in" appointments</div>
+            <h4 class="card-header bg-secondary text-warning">Faculty Walk-In Office Hours</h4>
             <div class="card-body">
               <?php include "walkinAppts.php"; ?>
             </div>
