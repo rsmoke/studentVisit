@@ -4,7 +4,7 @@
 require_once($_SERVER["DOCUMENT_ROOT"] . "/../Support/configStudentVisit.php");
 
 $walkinLstSQL = <<<SQL
-	SELECT fname, lname, roomLoc, startTime, apptDate
+	SELECT fname, lname, roomLoc, startTime, endTime, apptDate
 	FROM tbl_walkinAppts wa
 	JOIN tbl_faculty fa ON wa.uniqname = fa.uniqname
 	ORDER BY wa.apptDate, wa.startTime,  fa.lname
@@ -21,15 +21,14 @@ $html .= "  <thead>";
 $html .= "    <tr class='bg-info'>";
 $html .= "      <th scope='col'>Name</th>";
 $html .= "      <th scope='col'>Location</th>";
-$html .= "      <th scope='col'>Start Time</th>";
+$html .= "      <th scope='col'>Time</th>";
 $html .= "   </tr>";
 $html .= "  </thead>";
 $html .= "  <tbody>";
 while($items = $walkinList->fetch_assoc())
   {
-		$appointment = new DateTime($items["apptDate"] . " " . $items["startTime"]);
 		$html .= "   <tr>";	
-  	$html .= "<td><strong>" . $items['fname'] . " " . $items['lname'] . "</strong></td><td>" . $items['roomLoc'] . "</td><td>" . $appointment->format('g:ia \o\n F jS') . "</td>";
+		$html .= "<td><strong>" . $items['fname'] . " " . $items['lname'] . "</strong></td><td>" . $items['roomLoc'] . "</td><td>" . date('g:i A', strtotime($items['startTime'])) . " - " . date('g:i A', strtotime($items['endTime'])) . " on " . date('F jS', strtotime($items['apptDate'])) . "</td>";
 		$html .= "   </tr>";
 	}
 	$html .=   "</tbody>";
