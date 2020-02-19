@@ -54,7 +54,7 @@
               <a class="nav-link" href="../studentVisitMap.php">Map</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../studentVisitEvents.php">Events</a>
+              <a class="nav-link" href="../studentVisitEvents.php">Schedule of Events</a>
             </li>
           </ul>
           <?php  if($showChkList): ?>
