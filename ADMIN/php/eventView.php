@@ -34,7 +34,7 @@ if ($check->num_rows > 0 ){
             <form id="updForm">
                <input type="hidden" id="recID" name="id_event" class="form-control">
                 <label for="date">Date</label>
-                  <div class="bfh-datepicker" data-date="<?php echo $day1->format('m/d/Y'); ?>" data-name="event_date" id="datePick1" data-min="<?php echo $day1->format('m/d/Y'); ?>" data-max="<?php echo $day3->format('m/d/Y'); ?>" ></div>
+                  <div class="bfh-datepicker" data-date="<?php echo $day1->format('m/d/Y'); ?>" data-name="event_date" id="datePick1" data-min="<?php echo $day1->format('m/d/Y'); ?>" data-max="<?php echo date_add($day1, date_interval_create_from_date_string('60 days'))->format('m/d/Y'); ?>" ></div>
                 <label for="start">Start Time</label>
                   <div id="start" data-name="event_dttm_start" class="bfh-timepicker" ></div>
                 <label for="end">End Time</label>

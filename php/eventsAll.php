@@ -17,4 +17,4 @@ if (!$eventList){
       echo "</tr>";
       }
 $eventList->close();
-$db->close();
+// $db->close();

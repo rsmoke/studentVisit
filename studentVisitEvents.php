@@ -51,6 +51,7 @@
         <button id="btnFirst" class ="btn btn-primary btn-sm" role="button">First Day</button>
         <button id="btnSecond" class ="btn btn-success btn-sm" role="button">Second Day</button>
         <button id="btnLast"  class ="btn btn-info btn-sm" role="button">Last Day</button>
+        <button id="btnOther"  class ="btn btn-default btn-sm" role="button">Other Events</button>
         <button id="btnAll"  class ="btn btn-outline-primary btn-sm" role="button">All Events</button>
         <a href="scheduleSAB.pdf"><button id='btnDwnld' class='btn btn-sm btn-link'><i class="fas fa-download"></i></button></a>
       </div>
@@ -96,6 +97,21 @@
           </thead>
           <tbody>
             <?php include "php/eventsThird.php"; ?>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-responsive">
+         <table id="eventsOther" class="table table-sm table-striped">
+          <thead class="thead-dark">
+            <tr class="m-0">
+              <th style="width: 15%;" scope="col">Start</th>
+              <th class="w-25" scope="col">Name</th>
+              <th style="width: 35%;" scope="col">Description</th>
+              <th class="w-25" scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php include "php/eventsOther.php"; ?>
           </tbody>
         </table>
       </div>

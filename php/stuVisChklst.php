@@ -50,9 +50,9 @@
               <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <?php  echo(($showChkList === true) ? "<li class='nav-item active myVisitChkLst'><a class='nav-link' href='stuVisChklst.php' >MiVisit Checklist</a></li>" : '') ?>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="../studentVisitMap.php">Map</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="../studentVisitEvents.php">Schedule of Events</a>
             </li>
@@ -64,6 +64,10 @@
           <?php endif; ?>
         </div><!--/.nav-collapse -->
     </nav>
+    <div class="bg-warning p-4 border border-danger rounded">
+    <h4 class="text-center">We have switched to a <a href="https://sites.google.com/a/umich.edu/michigan-sociology-recruitment/">virtual recruitment event</a> that will go live on <?php echo $day1->format("l, F jS");  ?></h4>
+        <p class="text-center">You can email <a href="mailto:soc-gradadmin@umich.edu">soc-gradadmin@umich.edu</a> with any questions</p>
+        </div>
 <?php if ($use_faculty_appt_system){ ?>
     <div class="container-fluid"><!-- Faculty appointment-->
       <h4>Faculty Appointments for <?php echo  $_SESSION['stuFname'] . " " . $_SESSION['stuLname'] ?></h4>
@@ -117,18 +121,18 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-sm-center">
+      <!-- <div class="row justify-content-sm-center">
         <hr class='col-sm-6'>
         <div class="col-sm-6">
           <div class="card border-primary" style="max-width: 30rem;">
             <h4 class="card-header bg-secondary text-warning">Faculty Walk-In Office Hours</h4>
-            <div class="card-body">
+            <div class="card-body"> -->
               <?php include "walkinAppts.php"; ?>
-            </div>
+            <!-- </div>
             <div class="card-footer text-muted"><small>Note: These appointments do not require a reservation</small></div>
           </div>
         </div>
-      </div>
+      </div> -->
     <?php } ?>
     </div> <!-- container Faculty appointment -->
 <?php } ?>

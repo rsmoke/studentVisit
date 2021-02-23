@@ -103,6 +103,7 @@
         <hr class="my-4">
         <p>We look forward to hosting you for our visitation events which are scheduled to begin on <?php echo $day1->format("l, F jS");  ?> and conclude on <?php echo $day3->format("l, F jS"); ?>.</p>
 
+
         <?php  if(!$showChkList): ?>
          Please sign in and let us know if you will be able to attend our virtual recruitment events.<br>
 
