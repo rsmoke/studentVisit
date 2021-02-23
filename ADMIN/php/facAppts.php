@@ -156,7 +156,7 @@ SQL;
             </div>
             <div class="form-group col-2">
               <label for="roomLoc">Enter a room</label>
-                <input type='text' class="form-control" id='roomLoc' name='roomLoc' value='' placeholder='Room Location'>
+                <input type='text' class="form-control" id='roomLoc' name='roomLoc' value='OnLine' placeholder='Room Location'>
               </label>
             </div>
             <table class='table table-sm'>
