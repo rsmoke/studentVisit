@@ -171,18 +171,19 @@
               <label class="form-check-label">I filled out the visit <a href="<?php echo $google_form_url; ?>" target="_blank">information form</a>.</label>
             </div>
             <?php } ?>
-
+            <br>
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="airlineTkt" id="airlineTkt" value="1">
-              <label class="form-check-label">Airline ticket reservation made.</label>
+              <label class="form-check-label">I would like my email address to be viewable by other students in this 2021 admit class.</label>
+              <span>Some students find it helpful to communicate with others in the admit class throughought the recruitment process. </span>
             </div>
-
-            <div class="form-check">
+            <br>
+            <!-- <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="hotel" id="hotel" value="1">
-              <label class="form-check-label">Hotel reservation made.</label>
-            </div>
+              <label class="form-check-label">Made Hotel Reservation</label>
+            </div> -->
 
-            <div class="form-check">
+            <!-- <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="shuttleArrive" id="shuttleArrive" value="1">
               <label class="form-check-label">Scheduled reservations for airport shuttle service<br> from <strong>Airport to Campus</strong>. <a href="http://www.theride.org/Services/Airport-Service" target="_blank">Airline Shuttle Service</a></label>
             </div>
@@ -191,12 +192,12 @@
               <input type="checkbox" class="chkLstChkBox form-check-input" name="shuttleDepart" id="shuttleDepart" value="1">
               <label class="form-check-label">Scheduled reservations for airport shuttle service<br> from <strong>Campus to Airport</strong>. <a href="http://www.theride.org/Services/Airport-Service" target="_blank">Airline Shuttle Service</a></label>
             </div>
-
+-->
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="facAppt" id="facAppt" value="1">
-              <label class="form-check-label">Faculty appointments made.</label>
-            </div>
-
+              <label class="form-check-label">I have signed up for a 1-on-1 virtual meeting with a faculty member.</label>
+            </div> 
+<!-- 
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="welcomeDinner" id="welcomeDinner" value="1">
               <label class="form-check-label">I plan on attending the Welcome dinner.</label>
@@ -210,26 +211,26 @@
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="deptLunch" id="deptLunch" value="1">
               <label class="form-check-label">I plan on attending the Department lunch.</label>
-            </div>
-
+            </div> -->
+            <hr>
             <div class="form-group">
               <label for="studentBio">
-                Enter a short biography to tell us about yourself. <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-target="#bioExample">View an example</button>
+              Student Bio -  Please enter a short bio to tell us about yourself.  This bio will be shared with our faculty, staff, current students, and the other students in this admit class. If you would like pronouns listed next to your name in your bio, please also include them here. <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-target="#bioExample">View an example</button>
               </label>
               <textarea class="form-control chkLstTxtBox" name="studentBio" id="studentBio" rows="4" placeholder="Enter your biographical information here."></textarea>
             </div>
 
             <div class="form-group">
-              <label for="dietrestriction">Do you have any dietary restrictions?</label>
+              <label for="dietrestriction">Please print your name (first and last) as you would like it to be displayed on your bio</label>
               <textarea class="form-control chkLstTxtBox" name="dietrestriction" id="dietrestriction" rows="1"></textarea>
             </div>
             <div class="form-group">
-              <label for="accessibility">Do you have any accessibility needs?</label>
+              <label for="accessibility">Do you have any accommodation or access needs that we can help facilitate?</label>
               <textarea class="form-control chkLstTxtBox" name="accessibility" id="accessibility" rows="1"></textarea>
             </div>
             <div class="form-group">
-              <label for="shirt">T-Shirt Size</label>
-              <textarea class="form-control chkLstTxtBox" name="shirt" id="shirt" rows="1"></textarea>
+              <label for="shirt">Phone Number and Current Mailing Address</label>
+              <textarea class="form-control chkLstTxtBox" name="shirt" id="shirt" rows="2"></textarea>
             </div>
           </form>
         </div>

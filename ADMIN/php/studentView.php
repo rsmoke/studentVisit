@@ -62,17 +62,17 @@ if ($isAdmin){
               <th>Last Name</th>
               <th>First Name</th>
               <th>eMail</th>
-              <th>Plane Ticket</th>
-              <th>Hotel</th>
+              <th>Share eMail</th>
+              <!-- <th>Hotel</th>
               <th>Shuttle from airport</th>
-              <th>Shuttle to airport</th>
+              <th>Shuttle to airport</th> -->
               <th>Faculty Appt</th>
-              <th>Welcome Dinner</th>
+              <!-- <th>Welcome Dinner</th>
               <th>Rec Lunch</th>
-              <th>Dept Lunch</th>
-              <th>Diet Restriction</th>
+              <th>Dept Lunch</th> -->
+              <th>First and Last Name</th>
               <th>Accessibility</th>
-              <th>T-Shirt size</th>
+              <th>Contact Info</th>
               <th>Biography</th>
           </tr>
           <thead>
