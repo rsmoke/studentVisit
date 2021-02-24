@@ -16,7 +16,7 @@ if (!$eventList){
     while($row = $eventList->fetch_array(MYSQLI_ASSOC))
       {
       echo "<tr class='m-0'>";
-      echo "<td style='width: 15%;'>" . date("g:i A", strtotime($row['event_dttm_start'])) . "</td><td class='w-25'>" . $row['event_name'] . "</td><td style='width: 35%;'>" . $row['event_description'] . "</td><td class='w-25'>" . $row['locationID'] . "</td>";
+      echo "<td style='width: 15%;'>" . date("g:i A", strtotime($row['event_dttm_start']))  . ' - ' . date("g:i A", strtotime($row['event_dttm_end'])) . "</td><td class='w-25'>" . $row['event_name'] . "</td><td style='width: 35%;'>" . $row['event_description'] . "</td><td class='w-25'>" . $row['locationID'] . "</td>";
       echo "</tr>";
       }
 

@@ -13,7 +13,7 @@ if (!$eventList){
     while($row = $eventList->fetch_array(MYSQLI_ASSOC))
       {
       echo "<tr>";
-      echo "<td>" . date("g:i A", strtotime($row['event_dttm_start'])) . "</td><td>" . $row['event_name'] . "</td><td>" . $row['event_description'] . "</td><td>" . $row['locationID'] . "</td>";
+      echo "<td>" . date("g:i A", strtotime($row['event_dttm_start'])) . " - " . date("g:i A", strtotime($row['event_dttm_end'])) . "</td><td>" . $row['event_name'] . "</td><td>" . $row['event_description'] . "</td><td>" . $row['locationID'] . "</td>";
       echo "</tr>";
       }
 $eventList->close();
