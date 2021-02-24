@@ -1,7 +1,6 @@
 <?php
 // include and create object
   require_once($_SERVER["DOCUMENT_ROOT"] . "/../Support/configStudentVisit.php");
-  //require_once($_SERVER["DOCUMENT_ROOT"] . "/../Support/basicLib.php");
 
 if ($isAdmin){
 
@@ -62,14 +61,9 @@ if ($isAdmin){
               <th>Last Name</th>
               <th>First Name</th>
               <th>eMail</th>
+              <th>Attend welcome event</th>
               <th>Share eMail</th>
-              <!-- <th>Hotel</th>
-              <th>Shuttle from airport</th>
-              <th>Shuttle to airport</th> -->
               <th>Faculty Appt</th>
-              <!-- <th>Welcome Dinner</th>
-              <th>Rec Lunch</th>
-              <th>Dept Lunch</th> -->
               <th>First and Last Name</th>
               <th>Accessibility</th>
               <th>Contact Info</th>

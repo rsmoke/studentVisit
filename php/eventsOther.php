@@ -1,5 +1,5 @@
 <?php
-//Perfrom a SQL call that to get first day events that are listed in the table. The eventTypeID of 999 is reserved
+//Perform a SQL call that to get first day events that are listed in the table. The eventTypeID of 999 is reserved
 //  for special use. This was incorported due to discussion of possible subevent type that may occur in the future.
 //The table is structured here (on the server side) and appended to the table object on the client page.
 //The time format 12 vs 24 is handled due to users request for a 12 hour format. The day and the time zone
@@ -8,7 +8,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/../Support/configStudentVisit.php");
 
 echo "<tr class='table-default m-0'><td colspan = '4'><b>Other Events</b></td></tr>";
 
-$eventListSQL = "SELECT * FROM tbl_events WHERE eventTypeID <> 999 AND event_date > '{$day3->format('Y-m-d')}' ORDER BY event_dttm_start ASC";
+$eventListSQL = "SELECT * FROM tbl_events WHERE eventTypeID <> 999 AND event_date > '{$day3->format('Y-m-d')}' ORDER BY event_date ASC, event_dttm_start ASC";
 
 $eventList = $db->query($eventListSQL);
 if (!$eventList){
@@ -22,4 +22,3 @@ if (!$eventList){
       }
 
 $eventList->close();
-// $db->close();
