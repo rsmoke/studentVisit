@@ -1,0 +1,21 @@
+[10-Feb-2021 13:58:47 America/Detroit] PHP Fatal error:  Call to a member function free() on boolean in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php on line 18
+[10-Feb-2021 14:08:15 America/Detroit] PHP Fatal error:  Call to a member function free() on boolean in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php on line 18
+[23-Feb-2021 18:30:06 America/Detroit] PHP Fatal error:  Call to a member function format() on boolean in /home/hestia/public_html/studentVisit/ADMIN/php/myEventInsert.php on line 16
+[09-Mar-2021 10:09:21 America/Detroit] PHP Fatal error:  Call to a member function format() on boolean in /home/hestia/public_html/studentVisit/ADMIN/php/myEventInsert.php on line 13
+[09-Mar-2021 10:11:49 America/Detroit] PHP Fatal error:  Call to a member function format() on boolean in /home/hestia/public_html/studentVisit/ADMIN/php/myEventInsert.php on line 16
+[09-Mar-2021 10:14:03 America/Detroit] PHP Fatal error:  Call to a member function format() on boolean in /home/hestia/public_html/studentVisit/ADMIN/php/myEventInsert.php on line 16
+[08-Feb-2022 12:10:43 America/Detroit] PHP Fatal error:  Call to a member function free() on boolean in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php on line 18
+[08-Feb-2022 12:10:56 America/Detroit] PHP Fatal error:  Call to a member function free() on boolean in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php on line 18
+[04-Mar-2022 07:54:54 America/Detroit] PHP Fatal error:  Call to a member function free() on boolean in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php on line 18
+[02-Nov-2022 10:23:21 America/Detroit] PHP Fatal error:  Uncaught Error: Call to a member function free() on bool in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php on line 18
+[26-Jan-2023 11:57:45 America/Detroit] PHP Fatal error:  Uncaught Error: Call to a member function free() on bool in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php on line 18
+[26-Jan-2023 11:57:50 America/Detroit] PHP Fatal error:  Uncaught Error: Call to a member function free() on bool in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/hestia/public_html/studentVisit/ADMIN/php/myAdminFormSubmit.php on line 18

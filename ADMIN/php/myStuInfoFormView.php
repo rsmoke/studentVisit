@@ -1,7 +1,6 @@
 <?php
 
   require_once($_SERVER["DOCUMENT_ROOT"] . "/../Support/configStudentVisit.php");
-  //require_once($_SERVER["DOCUMENT_ROOT"] . "/../Support/basicLib.php");
 
 		$queryStuInfo = "SELECT * FROM tbl_user ORDER BY Lname ASC";
 

@@ -81,9 +81,6 @@
             </li>
             <?php  echo(($showChkList === true) ? "<li class='nav-item myVisitChkLst'><a class='nav-link' href='php/stuVisChklst.php' >MiVisit Checklist</a></li>" : '') ?>
             <li class="nav-item">
-              <a class="nav-link" href="studentVisitMap.php">Map</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="studentVisitEvents.php">Schedule of Events</a>
             </li>
           </ul>
@@ -102,9 +99,11 @@
         <p class="lead">Congratulations on your admission to the Department of <?php echo $deptLngName ?> at the University of Michigan!</p>
         <hr class="my-4">
         <p>We look forward to hosting you for our visitation events which are scheduled to begin on <?php echo $day1->format("l, F jS");  ?> and conclude on <?php echo $day3->format("l, F jS"); ?>.</p>
+        <p>There will be additional opportunities for you to attend regularly scheduled department events between March 21st and April 15th. Please see the schedule of events for more information.</p>
+
 
         <?php  if(!$showChkList): ?>
-         Please sign in and let us know if you will be able to attend our recruitment events.<br>
+         Please sign in and let us know if you will be able to attend our virtual recruitment events.<br>
 
           <form class="form-inline" action="index.php" method="post">
 
@@ -147,10 +146,6 @@
           </ul>
           <hr>
           <ul>
-            <li class="font-weight-light"><small><a href="https://www.graduatehotels.com/ann-arbor/" target="_blank">The Graduate (Hotel) Information</a></small></li>
-            <li class="font-weight-light"><small><a href="Airport%20Transportation.pdf" target="_blank">Shuttle Service to and from Metro Airport</a></small></li>
-            <li class="font-weight-light"><small><a href="https://campusinfo.umich.edu/campusmap" target="_blank">All UofM Maps</a></small></li>
-            <li class="font-weight-light"><small><a href="https://ltp.umich.edu/parking/visitors.php" target="_blank">UofM Parking</a></small></li>
             <li class="font-weight-light"><small><a href="http://umich.edu/about/" target="_blank">About U-M</a></small></li>
           </ul>
         </div>

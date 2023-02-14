@@ -2,7 +2,7 @@
   <hr class="my-4">
   <footer class="row justify-content-sm-center">
     <div class="col">
-      <small>Copyright &copy; 2020 by The Regents of the University of Michigan All Rights Reserved.</small>
+      <small>Copyright &copy; 2021 by The Regents of the University of Michigan All Rights Reserved.</small>
     </div>
 
   </footer>

@@ -2,17 +2,10 @@
   <hr class="my-4">
   <footer class="row justify-content-sm-center">
     <div class="col-11">
-      <small>Copyright &copy; 2020 by The Regents of the University of Michigan
+      <small>Copyright &copy; 2021 by The Regents of the University of Michigan
       All Rights Reserved.</small>
     </div>
     <div class="col-1"><a href="https://hestia.soc.lsa.umich.edu/studentVisit/ADMIN"><span class="text-muted small">admin</span></a></div>
-
-
-    <?php
-    if ($isAdmin){
-      echo '<div class="col-auto"><a href="ADMIN/index.php" class="btn btn-sm btn-primary" role="button">ADMIN</a></div>';
-    }
-    ?>
   </footer>
 </div>
 
