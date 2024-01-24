@@ -5,7 +5,7 @@
       <small>Copyright &copy; 2023 by The Regents of the University of Michigan
       All Rights Reserved.</small>
     </div>
-    <div class="col-1"><a href="https://hestia.soc.lsa.umich.edu/studentVisit/ADMIN"><span class="text-muted small">admin</span></a></div>
+    <div class="col-1"><a href="https://hestia.soc.lsa.umich.edu/student_visit_admin.php"><span class="text-muted small">admin</span></a></div>
 
 
     <?php
