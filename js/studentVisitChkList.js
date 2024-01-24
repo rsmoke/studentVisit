@@ -35,11 +35,11 @@ $( document ).ready( function() {
   }
 
   $(".chkLstChkBox" ).click( function() {
-    $("#stuChkLstMessage").text("You need to save your changes");
+    $("#stuChkLstMessage").html('<span class="text-danger">!! You need to save your changes !!</span>');
   });
 
   $(".chkLstTxtBox" ).change( function() {
-    $("#stuChkLstMessage").text("You need to save your changes");
+    $("#stuChkLstMessage").html('<span class="text-danger">!! You need to save your changes !!</span>');
   });
 
 

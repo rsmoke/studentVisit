@@ -19,7 +19,7 @@
 		die("Database query failed.");
 		}
 	while($items = $resChklst->fetch_array(MYSQLI_ASSOC)){
-		array_push($resultChklst, array('id' =>$items["id"],'notAttend' =>$items["notAttend"],'attend' =>$items["attend"],'google_form' =>$items["google_form"], 'airlineTkt' =>$items["airlineTkt"], 'hotel' =>$items["hotel"], 'shuttleArrive' =>$items["shuttleArrive"], 'shuttleDepart' =>$items["shuttleDepart"], 'facAppt' =>$items["facAppt"], 'dietrestriction' =>$items["dietrestriction"], 'welcomeDinner' =>$items["welcomeDinner"], 'recLunch' =>$items["recLunch"], 'deptLunch' =>$items["deptLunch"], 'studentBio' =>$items["studentBio"], 'accessibility' =>$items["accessibility"], 'shirt' =>$items["shirt"]) );
+		array_push($resultChklst, array('id' =>$items["id"],'notAttend' =>$items["notAttend"],'attend' =>$items["attend"],'google_form' =>$items["google_form"], 'airlineTkt' =>$items["airlineTkt"], 'hotel' =>$items["hotel"], 'shuttleArrive' =>$items["shuttleArrive"], 'shuttleDepart' =>$items["shuttleDepart"], 'facAppt' =>$items["facAppt"], 'dietrestriction' =>$items["dietrestriction"], 'welcomeDinner' =>$items["welcomeDinner"], 'recLunch' =>$items["recLunch"], 'socEvent' =>$items["socEvent"], 'deptLunch' =>$items["deptLunch"], 'studentBio' =>$items["studentBio"], 'accessibility' =>$items["accessibility"], 'shirt' =>$items["shirt"]) );
 	}
 
 	echo (json_encode($resultChklst));

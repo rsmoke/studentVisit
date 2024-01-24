@@ -27,9 +27,26 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
-              <p class="small">Jane is a senior at Rice University, where she will earn her BA in Sociology and the Study of Women, Gender, and Sexualities. Her research interests lie in social demography, health disparities, and the life course. In graduate school, she wants to explore the health trajectories of immigrants and the impact of residential spaces on immigrant health. Jane grew up in Minnesota, but is still not used to the cold. She enjoys a good Barre or Bikram workout, hole-in-the-wall restaurants, and foreign languages.</p>
+              <p class="small">Lex is a proud graduate of Lincoln University in Pennsylvania. 
+                They have spent the past 7 years in the nonprofit world working for the Neighborhood 
+                Technical Assistance Clinic, Prep for Prep, and most recently, the American Civil 
+                Liberties Union. Their work recruiting for the Prep for Prep program and relationships
+                 with colleagues and friends inspired their interest in the Sociology of Education. 
+                 More specifically, they are interested in Race, Stratification and the Black-White 
+                 achievement gap on the K-12 level.  Lex has a deep-seated love for qualitative methods 
+                 but is interested in becoming a mixed-methods scholar.  They hail from the planet of 
+                 Brooklyn and, while they admit to being NY-centric at times, they welcome a change of scenery.</p>
               <hr>
-              <p class="small">Joseph will be graduating from Emory University this upcoming May with a degree in <?php echo $deptLngName; ?>.  As an undergraduate, his independent research explored the experiences of underrepresented minority students at institutions of higher education.  He is excited to continue studying the nexus among race, class and education, looking particularly at how the mass expansion of postsecondary education has impacted social inequality and social mobility in the U.S., as well as how race and class differences affect educational outcomes and future occupational attainment.  He is originally from Milwaukee, WI (although he does not consider himself a cheesehead), and describes himself as an avid reader, aggressive runner, and adventurous traveler.</p>
+              <p class="small">Jeong will be graduating from Emory University this upcoming May with a degree in Sociology.
+               As an undergraduate, her independent research explored the experiences of underrepresented 
+               minority students at institutions of higher education. She is excited to continue studying the 
+               nexus among race, class, and education, looking particularly at how the mass expansion of
+                postsecondary education has impacted social inequality and social mobility in the U.S., 
+                as well as how race and class differences affect educational outcomes and future 
+                occupational attainment.  Jeong is originally from Milwaukee, WI (although she does 
+                not consider herself a cheesehead), and describes herself as an avid reader, foodie, 
+                and proud dog mom.
+              </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -50,6 +67,9 @@
               <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <?php  echo(($showChkList === true) ? "<li class='nav-item active myVisitChkLst'><a class='nav-link' href='stuVisChklst.php' >MiVisit Checklist</a></li>" : '') ?>
+            <li class="nav-item">
+              <a class="nav-link" href="../studentVisitMap.php">Map</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="../studentVisitEvents.php">Schedule of Events</a>
             </li>
@@ -89,8 +109,10 @@
           <hr class="my-4">
           <h6>Make an appointment</h6>
           <ol>
-            <li>From the <strong>Faculty List</strong> below select the name of the faculty member that you want to meet with during your visit.</li>
-            <li>Click on the appointment that you want to set. <em><strong>Note: Appointments are for 1/2 hour each</strong></em>.</li>
+            <li>From the <strong>Faculty List</strong> below select the name of the individual that you want to meet with during your visit.</li>
+            <li>Click on the appointment that you want to set.</li>
+            <li>Please make an additional appointment with the Academic Program Manager - Jill Hoppenjans to discuss funding if needed.</li>
+            <li><em><strong>Note: Appointments are for 1/2 hour each</strong></em>.</li>
           </ol>
         </div>
       </div>
@@ -114,6 +136,18 @@
           </div>
         </div>
       </div>
+      <div class="row justify-content-sm-center">
+        <hr class='col-sm-6'>
+        <div class="col-sm-6">
+          <div class="card border-primary" style="max-width: 30rem;">
+            <h4 class="card-header bg-secondary text-warning">Faculty Walk-In Office Hours</h4>
+            <div class="card-body">
+              <?php include "walkinAppts.php"; ?>
+            </div>
+            <div class="card-footer text-muted"><small>Note: These appointments do not require a reservation</small></div>
+          </div>
+        </div>
+      </div>
     <?php } ?>
     </div> <!-- container Faculty appointment -->
 <?php } ?>
@@ -122,7 +156,7 @@
         <div class="col">
           <hr class="my-4">
           <h3><?php echo  $_SESSION['stuFname'] . " " . $_SESSION['stuLname'] ?>'s Visit Checklist</h3>
-          <p>Please complete the information below.
+          <p>To be sure your visit will be successful, go through this checklist and mark-off the items as you complete them.
             Click <button type="submit" class="btn btn-info btn-sm disabled">Update</button> after you make any changes.</p>
           <h6><span id="stuChkLstMessage" style="color:blue"></span></h6>
         </div>
@@ -130,6 +164,7 @@
       <div class="row">
         <div class="col-md-8 offset-md-1">
           <form id="chklst" name="chklst" role="form">
+           <!-- <input type="text" name="usrName" id="usrName" value="<?php //echo $_SESSION['stuVisUsername'] ?>"> -->
             <div class="form-group row">
               <div class="col-sm-10">
                 <button type="submit" id="btnCheckListSubmit" name="chkLstSubmit" class="btn btn-info btn-sm">Update</button>
@@ -137,50 +172,84 @@
             </div>
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input form-check-input" name="notAttend" id="notAttend" value="1">
-              <label class="form-check-label">I <u>DO NOT</u> plan on attending the live welcome event on <?php echo $day1->format('l, F jS'); ?>.</label>
+              <label class="form-check-label">I <u>DO NOT</u> plan on attending.</label>
             </div>
 
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="attend" id="attend" value="1">
-              <label class="form-check-label">I plan on attending the live welcome event on  <?php echo $day1->format('l, F jS'); ?>.</label>
+              <label class="form-check-label">I plan on attending.</label>
             </div>
 
             <?php if (isset($google_form_url)){ ?>
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="google_form" id="google_form" value="1">
-              <label class="form-check-label">I filled out the visit <a href="<?php echo $google_form_url; ?>" target="_blank">information form</a>.</label>
+              <label class="form-check-label">I filled out the <a href="<?php echo $google_form_url; ?>" target="_blank">Proof of Vaccination form</a>.</label>
             </div>
             <?php } ?>
-            <br>
+
+            <div class="form-check">
+              <input type="checkbox" class="chkLstChkBox form-check-input" name="shuttleArrive" id="shuttleArrive" value="1">
+              <label class="form-check-label">I filled out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfccGsi0pUB5f_Pu93mVrVKtZU9jByXlz9udiXr2KxEbOMcmA/viewform?usp=sf_link" target="_blank">Recruitment Travel Booking Form</a></label>
+            </div>
+
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="airlineTkt" id="airlineTkt" value="1">
-              <label class="form-check-label">I would like my email address to be viewable by other students in this admit class.</label>
-              <span>Some students find it helpful to communicate with others in the admit class throughought the recruitment process. </span>
+              <label class="form-check-label">Airline ticket reservation made.</label>
             </div>
-            <br>
+
+            <div class="form-check">
+              <input type="checkbox" class="chkLstChkBox form-check-input" name="hotel" id="hotel" value="1">
+              <label class="form-check-label">Hotel reservation made.</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="chkLstChkBox form-check-input" name="shuttleDepart" id="shuttleDepart" value="1">
+              <label class="form-check-label">Scheduled transportation both ways between Airport and Campus. <a href="http://www.theride.org/Services/Airport-Service" target="_blank">Airline Shuttle Service</a></label>
+            </div>
+
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="facAppt" id="facAppt" value="1">
-              <label class="form-check-label">I have signed up for a 1-on-1 virtual meeting with a faculty member.</label>
-            </div> 
-            <hr>
+              <label class="form-check-label">Faculty appointments made.</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="chkLstChkBox form-check-input" name="welcomeDinner" id="welcomeDinner" value="1">
+              <label class="form-check-label">I plan on attending the <strong>Welcome Dinner</strong> on <?php echo $day1->format("l, F jS");  ?>.</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="chkLstChkBox form-check-input" name="recLunch" id="recLunch" value="1">
+              <label class="form-check-label">I plan on attending the <strong>Faculty Lunch</strong> on <?php echo $day2->format("l, F jS");  ?>.</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="chkLstChkBox form-check-input" name="socEvent" id="socEvent" value="1">
+              <label class="form-check-label">I plan on attending the <strong>Sociologists of Color Social</strong> on <?php echo $day2->format("l, F jS");  ?>.</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="chkLstChkBox form-check-input" name="deptLunch" id="deptLunch" value="1">
+              <label class="form-check-label">I plan on attending the <strong>Recruitment Dinner</strong> on <?php echo $day2->format("l, F jS");  ?>.</label>
+            </div>
+
             <div class="form-group">
               <label for="studentBio">
-              Student Bio -  Please enter a short bio to tell us about yourself.  This bio will be shared with our faculty, staff, current students, and the other students in this admit class.<button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-target="#bioExample">View an example</button>
+                Enter a short biography to tell us about yourself. <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-target="#bioExample">View an example</button>
               </label>
               <textarea class="form-control chkLstTxtBox" name="studentBio" id="studentBio" rows="4" placeholder="Enter your biographical information here."></textarea>
             </div>
 
             <div class="form-group">
-              <label for="dietrestriction">Please print your name (first and last) as you would like it to be displayed on your bio. If you would like pronouns listed next to your name in your bio, please also include them here.</label>
+              <label for="dietrestriction">Do you have any dietary restrictions?</label>
               <textarea class="form-control chkLstTxtBox" name="dietrestriction" id="dietrestriction" rows="1"></textarea>
             </div>
             <div class="form-group">
-              <label for="accessibility">Do you have any accommodation or access needs that we can help facilitate?</label>
+              <label for="accessibility">Do you have any accessibility needs?</label>
               <textarea class="form-control chkLstTxtBox" name="accessibility" id="accessibility" rows="1"></textarea>
             </div>
             <div class="form-group">
-              <label for="shirt">Unisex T-tshirt size (S-XXXL), Phone Number and Current Mailing Address</label>
-              <textarea class="form-control chkLstTxtBox" name="shirt" id="shirt" rows="2"></textarea>
+              <label for="shirt">T-Shirt Size</label>
+              <textarea class="form-control chkLstTxtBox" name="shirt" id="shirt" rows="1"></textarea>
             </div>
           </form>
         </div>

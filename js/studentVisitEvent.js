@@ -21,7 +21,7 @@ $( document ).ready(function(){
         $('#eventsThird').fadeIn();
         $('#eventsOther').fadeOut();
     });
-
+    //select button other events from events page
     $("#btnOther").click(function() {
         $('#eventsFirst').fadeOut();
         $('#eventsSecond').fadeOut();

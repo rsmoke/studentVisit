@@ -1,13 +1,16 @@
 <?php
   require_once($_SERVER["DOCUMENT_ROOT"] . "/../Support/configStudentVisit.php");
+  require_once($_SERVER["DOCUMENT_ROOT"] . "/../Support/basicLib.php");
 
   session_start();
-  $showChkList = false;
 
- if (isset($_SESSION['stuVisUsername'], $_SESSION['umid'])){
-  //show stuVisChklist button
-    $showChkList = true;
-  }
+  if (isset($_SESSION['stuVisUsername'], $_SESSION['umid'])){
+    //show stuVisChklist button here
+      $showChkList = true;
+    } else {
+        $showChkList = false;
+        redirect_to("../index.php");
+    }
  ?>
 
 <!doctype html>
@@ -27,6 +30,9 @@
             <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <?php  echo(($showChkList === true) ? "<li class='nav-item myVisitChkLst'><a class='nav-link' href='php/stuVisChklst.php' >MiVisit Checklist</a></li>" : '') ?>
+          <li class="nav-item">
+            <a class="nav-link" href="studentVisitMap.php">Map</a>
+          </li>
           <li class="nav-item active">
             <a class="nav-link" href="studentVisitEvents.php">Schedule of Events</a>
           </li>
@@ -48,16 +54,18 @@
         <button id="btnFirst" class ="btn btn-primary btn-sm" role="button">First Day</button>
         <button id="btnSecond" class ="btn btn-success btn-sm" role="button">Second Day</button>
         <button id="btnLast"  class ="btn btn-info btn-sm" role="button">Last Day</button>
-        <button id="btnOther"  class ="btn btn-default btn-sm" role="button">Other Events</button>
+        <button id="btnOther"  class ="btn btn-secondary btn-sm" role="button">Virtual Events</button>
         <button id="btnAll"  class ="btn btn-outline-primary btn-sm" role="button">All Events</button>
+        <!-- <a href="scheduleSAB.pdf"><button id='btnDwnld' class='btn btn-sm btn-link'><i class="fas fa-download"></i></button></a> -->
       </div>
       <div class="table-responsive">
         <table id="eventsFirst" class="table table-sm table-striped">
           <thead class="thead-dark">
             <tr class="m-0">
-              <th style="width: 15%;" scope="col">Start</th>
+              <th style="width: 10%;" scope="col">Start</th>
+              <th style="width: 10%;" scope="col">End</th>
               <th class="w-25" scope="col">Name</th>
-              <th style="width: 35%;" scope="col">Description</th>
+              <th style="width: 30%;" scope="col">Description</th>
               <th class="w-25" scope="col">Location</th>
             </tr>
           </thead>
@@ -70,9 +78,10 @@
         <table id="eventsSecond" class="table table-sm table-striped">
           <thead class="thead-dark">
             <tr class="m-0">
-              <th style="width: 15%;" scope="col">Start</th>
+              <th style="width: 10%;" scope="col">Start</th>
+              <th style="width: 10%;" scope="col">End</th>
               <th class="w-25" scope="col">Name</th>
-              <th style="width: 35%;" scope="col">Description</th>
+              <th style="width: 30%;" scope="col">Description</th>
               <th class="w-25" scope="col">Location</th>
             </tr>
           </thead>
@@ -85,9 +94,10 @@
          <table id="eventsThird" class="table table-sm table-striped">
           <thead class="thead-dark">
             <tr class="m-0">
-              <th style="width: 15%;" scope="col">Start</th>
+              <th style="width: 10%;" scope="col">Start</th>
+              <th style="width: 10%;" scope="col">End</th>
               <th class="w-25" scope="col">Name</th>
-              <th style="width: 35%;" scope="col">Description</th>
+              <th style="width: 30%;" scope="col">Description</th>
               <th class="w-25" scope="col">Location</th>
             </tr>
           </thead>
@@ -96,14 +106,17 @@
           </tbody>
         </table>
       </div>
-      <div class="table-responsive">
-         <table id="eventsOther" class="table table-sm table-striped">
+
+      <div id="eventsOther" class="table-responsive">
+        <div class="h3">Virtual Events Happening Around Recruitment</div>
+         <table class="table table-sm table-striped">
           <thead class="thead-dark">
             <tr class="m-0">
-              <th style="width: 15%;" scope="col">Start</th>
-              <th class="w-25" scope="col">Name</th>
+              <th style="width: 20%;" scope="col">Start</th>
+              <th class="w-20" scope="col">Name</th>
               <th style="width: 35%;" scope="col">Description</th>
-              <th class="w-25" scope="col">Location</th>
+              <th class="w-15" scope="col">Notes</th>
+              <th class="w-10" scope="col">Location</th>
             </tr>
           </thead>
           <tbody>

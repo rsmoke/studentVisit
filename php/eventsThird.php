@@ -6,7 +6,7 @@
 //  default variable is set in the configSocStuVisit.php
 require_once($_SERVER["DOCUMENT_ROOT"] . "/../Support/configStudentVisit.php");
 
-echo "<tr class='table-info m-0'><td colspan = '4'><b>" . $day3->format('l, F jS') . "</b></td></tr>";
+echo "<tr class='table-info m-0'><td colspan = '5'><b>" . $day3->format('l, F jS') . "</b></td></tr>";
 
 $eventListSQL = "SELECT * FROM tbl_events WHERE eventTypeID <> 999 AND event_date = '{$day3->format('Y-m-d')}' ORDER BY event_dttm_start ASC";
 $eventList = $db->query($eventListSQL);
@@ -16,9 +16,10 @@ if (!$eventList){
     while($row = $eventList->fetch_array(MYSQLI_ASSOC))
       {
       echo "<tr class='m-0'>";
-      echo "<td style='width: 15%;'>" . date("g:i A", strtotime($row['event_dttm_start']))  . ' - ' . date("g:i A", strtotime($row['event_dttm_end'])) . "</td><td class='w-25'>" . $row['event_name'] . "</td><td style='width: 35%;'>" . $row['event_description'] . "</td><td class='w-25'>" . $row['locationID'] . "</td>";
+      echo "<td style='width: 10%;'>" . date("g:i A", strtotime($row['event_dttm_start'])) . "</td><td style='width: 10%;'>" . date("g:i A", strtotime($row['event_dttm_end'])) . "</td><td class='w-25'>" . $row['event_name'] . "</td><td style='width: 30%;'>" . $row['event_description'] . "</td><td class='w-25'>" . $row['locationID'] . "</td>";
       echo "</tr>";
       }
 
 $eventList->close();
-// $db->close();
+//This is being called as includes on the same page don't close until last call occurs
+//$db->close();
