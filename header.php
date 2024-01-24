@@ -12,4 +12,29 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.min.css" />
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<style>
+.jumbotron {
+  position: relative;
+  background-image: url("images/socimage.jpeg");
+  background-size: cover;
+}
+
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  filter: brightness(60%);
+  z-index: 1;
+}
+
+.jumbotron * {
+  position: relative;
+  z-index: 2;
+}
+
+</style>
 </head>

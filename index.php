@@ -69,7 +69,7 @@
   <body>
   <?php include_once("analyticstracking.php") ?>
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color: #00274c;">
-      <a class="navbar-brand" href="index.php"><?php echo $siteTitle ?></a>
+      <img src="images/LSA_logo_4c_reverse.png" class="img-fluid" alt="LSA Logo" style="max-height: 35px;">&nbsp; <a class="navbar-brand" href="index.php"><?php echo $siteTitle ?></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -100,15 +100,14 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="container-fluid">
-    <div class="jumbotron">
-        <a href="<?php echo $deptURL;?>"><img src="images/<?php echo $logo;?>" class="img-fluid rounded mx-auto d-block alt="Department Logo" /></a>
-        <p class="lead">Congratulations on your admission to the Department of <?php echo $deptLngName ?> at the University of Michigan!</p>
-        <hr class="my-4">
-        <p>We look forward to hosting you for our visitation events which are scheduled to begin on <?php echo $day1->format("l, F jS");  ?> and conclude on <?php echo $day3->format("l, F jS"); ?>.</p>
+<div class="jumbotron jumbotron-fluid">    
+<div class="container">
+       <!-- <a href="<?php echo $deptURL;?>"><img src="images/<?php echo $logo;?>" class="img-fluid rounded mx-auto d-block alt="Department Logo" /></a> -->
+        <h1 class="display-4 text-white">Congratulations on your admission to the Department of <?php echo $deptLngName ?> at the University of Michigan!</h1>
+        <p class="lead text-white">We look forward to hosting you for our visitation events which are scheduled to begin on <?php echo $day1->format("l, F jS");  ?> and conclude on <?php echo $day3->format("l, F jS"); ?>.</p>
 
         <?php  if(!$showChkList): ?>
-         Please sign in and let us know if you will be able to attend our recruitment events.<br>
+         <p class="lead text-white">Please sign in and let us know if you will be able to attend our recruitment events.</p>
 
           <form class="form-inline" action="index.php" method="post">
 
@@ -130,7 +129,7 @@
           <?php echo(isset($message) ? "<h6 class='logMessage'>{$message}</h6>" : '' );
           endif; ?>
 
-        <p><small class="text-muted">This page will be updated periodically, please check back before your visit.</small></p>
+        <p><small class="text-white">This page will be updated periodically, please check back before your visit.</small></p>
     </div>
   </div>
     <div class="container-fluid">
