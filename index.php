@@ -103,7 +103,7 @@
 <div class="jumbotron jumbotron-fluid">    
 <div class="container">
        <!-- <a href="<?php echo $deptURL;?>"><img src="images/<?php echo $logo;?>" class="img-fluid rounded mx-auto d-block alt="Department Logo" /></a> -->
-        <h1 class="display-4 text-white">Congratulations on your admission to the Department of <?php echo $deptLngName ?> at the University of Michigan!</h1>
+        <h1 class="display-4 text-white">Welcome to Michigan <?php echo $deptLngName ?>!</h1>
         <p class="lead text-white">We look forward to hosting you for our visitation events which are scheduled to begin on <?php echo $day1->format("l, F jS");  ?> and conclude on <?php echo $day3->format("l, F jS"); ?>.</p>
 
         <?php  if(!$showChkList): ?>
