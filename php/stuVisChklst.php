@@ -187,15 +187,15 @@
             </div>
             <?php } ?>
 
-            <div class="form-check">
+            <!-- <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="shuttleArrive" id="shuttleArrive" value="1">
               <label class="form-check-label">I filled out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfccGsi0pUB5f_Pu93mVrVKtZU9jByXlz9udiXr2KxEbOMcmA/viewform?usp=sf_link" target="_blank">Recruitment Travel Booking Form</a></label>
-            </div>
+            </div> -->
 
-            <div class="form-check">
+            <!-- <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="airlineTkt" id="airlineTkt" value="1">
               <label class="form-check-label">Travel arrangements made.</label>
-            </div>
+            </div> -->
 
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="hotel" id="hotel" value="1">
