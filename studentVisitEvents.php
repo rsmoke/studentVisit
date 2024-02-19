@@ -49,6 +49,7 @@
 
       <div class="innerPage">
         <h2>Student Visit Events</h2>
+        <p><em>NOTE: Two asterisks (**) next to an event's Name denotes attendance is optional</em></p>
       </div>
       <div class="btn-group">
         <button id="btnFirst" class ="btn btn-primary btn-sm" role="button">First Day</button>
