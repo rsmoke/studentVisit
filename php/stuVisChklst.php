@@ -137,18 +137,18 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-sm-center">
+      <!-- <div class="row justify-content-sm-center">
         <hr class='col-sm-6'>
         <div class="col-sm-6">
           <div class="card border-primary" style="max-width: 30rem;">
             <h4 class="card-header bg-secondary text-warning">Faculty Walk-In Office Hours</h4>
             <div class="card-body">
-              <?php include "walkinAppts.php"; ?>
+              <?php //include "walkinAppts.php"; ?>
             </div>
             <div class="card-footer text-muted"><small>Note: These appointments do not require a reservation</small></div>
           </div>
         </div>
-      </div>
+      </div> -->
     <?php } ?>
     </div> <!-- container Faculty appointment -->
 <?php } ?>
