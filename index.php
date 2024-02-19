@@ -151,7 +151,7 @@
           <hr>
           <ul>
             <li class="font-weight-light"><small><a href="https://www.graduatehotels.com/ann-arbor/" target="_blank">The Graduate (Hotel) Information</a></small></li>
-            <li class="font-weight-light"><small><a href="AnnArborTravelGuide-SociologyRecruitment.pdf" target="_blank">Transportation and Travel Guide</a></small></li>
+            <li class="font-weight-light"><small><a href="https://drive.google.com/file/d/13L7sc-ipccLtYW9AmTT1h6wifVp6vaGk/view?usp=sharing" target="_blank">Transportation and Travel Guide</a></small></li>
             <li class="font-weight-light"><small><a href="https://campusinfo.umich.edu/campusmap" target="_blank">All UofM Maps</a></small></li>
             <li class="font-weight-light"><small><a href="https://ltp.umich.edu/parking/visitors.php" target="_blank">UofM Parking</a></small></li>
             <li class="font-weight-light"><small><a href="http://umich.edu/about/" target="_blank">About U-M</a></small></li>

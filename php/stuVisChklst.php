@@ -183,7 +183,7 @@
             <?php if (isset($google_form_url)){ ?>
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="google_form" id="google_form" value="1">
-              <label class="form-check-label">I filled out the <a href="<?php echo $google_form_url; ?>" target="_blank">Proof of Vaccination form</a>.</label>
+              <label class="form-check-label">Airline travel booked through <a href="<?php echo $google_form_url; ?>" target="_blank">Travel Booking Form</a>.</label>
             </div>
             <?php } ?>
 
@@ -194,12 +194,12 @@
 
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="airlineTkt" id="airlineTkt" value="1">
-              <label class="form-check-label">Airline ticket reservation made.</label>
+              <label class="form-check-label">Travel arrangements made.</label>
             </div>
 
             <div class="form-check">
               <input type="checkbox" class="chkLstChkBox form-check-input" name="hotel" id="hotel" value="1">
-              <label class="form-check-label">Hotel reservation made.</label>
+              <label class="form-check-label">I will need hotel accommodations on Sunday and Monday evening.</label>
             </div>
 
             <div class="form-check">
@@ -223,13 +223,13 @@
             </div>
 
             <div class="form-check">
-              <input type="checkbox" class="chkLstChkBox form-check-input" name="socEvent" id="socEvent" value="1">
-              <label class="form-check-label">I plan on attending the <strong>Sociologists of Color Social</strong> on <?php echo $day2->format("l, F jS");  ?>.</label>
+              <input type="checkbox" class="chkLstChkBox form-check-input" name="deptLunch" id="deptLunch" value="1">
+              <label class="form-check-label">I plan on attending the <strong>Recruitment Dinner</strong> on <?php echo $day2->format("l, F jS");  ?>.</label>
             </div>
 
             <div class="form-check">
-              <input type="checkbox" class="chkLstChkBox form-check-input" name="deptLunch" id="deptLunch" value="1">
-              <label class="form-check-label">I plan on attending the <strong>Recruitment Dinner</strong> on <?php echo $day2->format("l, F jS");  ?>.</label>
+              <input type="checkbox" class="chkLstChkBox form-check-input" name="socEvent" id="socEvent" value="1">
+              <label class="form-check-label">I plan on attending the <strong>Sociologists of Color Social</strong> on <?php echo $day3->format("l, F jS");  ?>.</label>
             </div>
 
             <div class="form-group">
