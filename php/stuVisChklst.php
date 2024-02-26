@@ -108,7 +108,7 @@
         <div class="col">
           <hr class="my-4">
           <h6>Make an appointment</h6>
-          <p>These are informational meetings to get to know our faculty and learn more about the program. Please select no more than 3 meetings.</p>
+          <p>These are informational meetings to get to know our faculty and learn more about the program. Please select no more than 4 meetings.</p>
           <ol>
             <li>From the <strong>Faculty List</strong> below select the name of the individual that you want to meet with during your visit.</li>
             <li>Click on the appointment that you want to set.</li>
